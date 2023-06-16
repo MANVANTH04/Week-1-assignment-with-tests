@@ -8,5 +8,27 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+
+    const date = new Date().getTime();
+
+    let sum = 0;
+    for (let i = 0; i<n; i++){
+        sum += i;
+    }
+    const date2 = new Date().getTime();
+
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.getMonth() + 1; // Note: Months are zero-based, so add 1
+    const day = currentDate.getDate();
+
+    console.log(`Current date: ${year}-${month}-${day}`);
+
+    
+
+    return date2 - date;
+
+    // return 0.01;
 }
+
+console.log(calculateTime(1000000000));

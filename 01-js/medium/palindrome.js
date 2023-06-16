@@ -6,8 +6,25 @@
   - `npm run test-palindrome`
 */
 
+// var str   = 'abba'
+
+const smallalpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+ 
+
 function isPalindrome(str) {
-  return true;
+
+  var anarray = []
+  var ansplit = str.toLowerCase().split("")
+
+  for (var i = 0 ; i < ansplit.length; i++){
+    if (smallalpha.includes(ansplit[i])){
+      anarray.push(ansplit[i])
+    }
+  }
+  return anarray.join("") === anarray.reverse().join("")
+
 }
+
+// console.log(isPalindrome(str))
 
 module.exports = isPalindrome;
